@@ -40,7 +40,21 @@ The video lectures can be found [here](https://www.youtube.com/playlist?list=PLL
   - Data is kept in chunks spread across machines and each chunk is **replicated** on different machines (**chunk servers**).
   - The **master node** stores the metadata about where the files are stored.
 
-  
+## Lecture 2 The Map-Reduce Computational Model
+
+```
+map => group by key => reduce
+```
+
+Map-reduce is an application of **divide and conquer** but there is a lot of work needs to be done to make sure the divide and conquer is done correctly. See [this post](https://softwareengineering.stackexchange.com/questions/98800/is-mapreduce-anything-more-than-just-an-application-of-divide-and-conquer).
+
+- Input: a set of key-value pairs
+- Map: map key-value pairs into new key-value pairs
+- Reduce: all key-value pairs with the same key are grouped together
+
+It is worth noting that by 2014, Google **no longer** used map-reduce model as their primary big data processing model. 
+
+
 
 ## Lecture 41 Overview of Recommendation Systems
 
