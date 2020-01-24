@@ -107,7 +107,23 @@ Partition function
   - Hive, Pig
     - Provide SQL-like abstractions on top of Hadoop map-reduce layer
 
-  
+## Lecture 5 Link Analysis and PageRank
+
+2 challenges of web search
+
+- Who to trust? There are a lot of spam pages.
+- No single answer
+
+All web pages are not equally important. Thus we can rank the pages by the link structure. 
+
+Link analysis: computing the importance of nodes in a graph
+
+- Page rank
+- Hubs and Authorities (HITS)
+- Topic-specific page rank
+- Web spam detection algorithms
+
+
 
 
 
