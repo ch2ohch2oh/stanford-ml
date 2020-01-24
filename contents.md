@@ -123,6 +123,20 @@ Link analysis: computing the importance of nodes in a graph
 - Topic-specific page rank
 - Web spam detection algorithms
 
+## Lecture 6 PageRank The Flow Formulation
+
+Basic idea: links as votes. More important pages have more links. And not all links are equal.
+
+Simple recursive formulation
+
+- Each link's vote is proportional to the importance of its source page
+- If page j with import r_j has n out-links, each link gets r_j/n votes
+- Page j's own importance is the sum of the votes on its in-links
+
+Mathematical definition of page rank
+$$
+r_ j = \sum_{i \to j } \frac{r_i}{d_i}
+$$
 
 
 
