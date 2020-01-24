@@ -2,7 +2,45 @@
 
 The video lectures can be found [here](https://www.youtube.com/playlist?list=PLLssT5z_DsK9JDLcT8T62VtzwyW9LNepV).
 
+## Lecture 1 Distributed File Systems
 
+- Cluster architecture
+
+  ```
+                      [switch]
+                          |
+         +----------------+----------------+
+         |                |                |
+  [cpu, mem, disk] [cpu, mem, disk] [cpu, mem, disk]
+  ```
+
+- What could go wrong with cluster computing?
+
+  - Node failure
+    - How to recover the data on failed node? Not losing the data?
+    - How to deal with node failure with long-running jobs?
+  - Network bottleneck
+    - Typically 1Gbs
+  - Distributed programming is hard!
+
+- **Map-reduce**
+
+  - Store data redundantly on multiple nodes for persistence and availability
+  - Move computation close to data to minimize data movement
+  - Simple programming model to hide the complexity of all this magic
+
+- Redundant storage infrastructure
+
+  - Distributed file system
+    - Goggle GFS, Hadoop HDFS
+  - Typical usage pattern
+    - Huge files
+    - Update is rare
+    - Reads and appends are common
+  - Data is kept in chunks spread across machines and each chunk is **replicated** on different machines (**chunk servers**).
+  - The **master node** stores the metadata about where the files are stored.
+
+  
 
 ## Lecture 41 Overview of Recommendation Systems
 
