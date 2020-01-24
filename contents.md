@@ -54,6 +54,23 @@ Map-reduce is an application of **divide and conquer** but there is a lot of wor
 
 It is worth noting that by 2014, Google **no longer** used map-reduce model as their primary big data processing model. 
 
+## Lecture 3 Scheduling and Data Flow
+
+The map-reduce environment takes care of:
+
+- Partitioning input data
+- Scheduling the program's execution across a number of machines
+- Performing the group by key step
+- Handling node failures
+- Managing the required inter-machine communication
+
+How many map and reduce jobs?
+
+- Make the number of map tasks much larger than the number of nodes
+- One DFS chunk per map is common
+- Improves dynamic load balancing and speeds up recovery from worker failures
+- The number of reducers is much smaller than the number of mappers
+
 
 
 ## Lecture 41 Overview of Recommendation Systems
