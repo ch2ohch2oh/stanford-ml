@@ -71,6 +71,44 @@ How many map and reduce jobs?
 - Improves dynamic load balancing and speeds up recovery from worker failures
 - The number of reducers is much smaller than the number of mappers
 
+## Lecture 4 Combiners and Partitions Functions
+
+Combiners
+
+- Save network time  by pre-aggregating values in the mapper
+- Combiner is usually the same as reducer
+
+Partition function
+
+- Want to control how keys get partitioned
+
+- System uses a default partition function
+
+  ```
+  hash(key) mod R
+  ```
+
+- Custom partition function
+
+  ```
+  hash(hostname(url)) mod R
+  ```
+
+  This will ensure all the files from the same host end up in the same output file
+
+- Implementations
+
+  - Google Map-Reduce
+    - Uses GFS
+    - Not available outside Google
+  - Hadoop
+    - Open-source implementation in Java
+    - Uses HDFS
+  - Hive, Pig
+    - Provide SQL-like abstractions on top of Hadoop map-reduce layer
+
+  
+
 
 
 ## Lecture 41 Overview of Recommendation Systems
