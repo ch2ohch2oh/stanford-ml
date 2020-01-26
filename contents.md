@@ -138,6 +138,23 @@ $$
 r_ j = \sum_{i \to j } \frac{r_i}{d_i}
 $$
 
+## Lecture 7 PageRank The Matrix Formulation
+
+Stochastic **adjacency matrix** $M$
+
+- Page $i$ has $d_i$ out-links
+- If $i \to j$ then $M_{ji} = \frac1{d_i}$ else $M_{ji}=0$ . Column sums to one.
+
+Rank vector $r$ 
+
+- $r_i$ is the importance of page $i$
+- $\sum_i r_i = 1$ 
+
+The equation for page rank
+$$
+M r = r
+$$
+
 
 
 
