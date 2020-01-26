@@ -155,6 +155,17 @@ $$
 M r = r
 $$
 
+## Lecture 8 PageRank Power Iteration 
+
+The main equation 
+$$
+r^{(i+1)} = M r^{(i)}
+$$
+The random walk interpretation
+$$
+p(t+1) = M p(t)
+$$
+
 
 
 
