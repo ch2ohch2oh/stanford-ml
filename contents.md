@@ -167,6 +167,62 @@ p(t+1) = M p(t)
 $$
 
 
+## Lecture 9 PageRank - The Google Formulation
+
+Some possible issues about the power iteration algorithm
+
+- Does it converge?
+
+  - Spider trap (all out links are within the group). The page ranks oscillate and does not converge.
+
+    ```
+    A <--> B ---> C ---+
+                  ^    |
+                  |    |
+                  +----+
+    ```
+
+    The solution is to use **teleport**. In other words, at each step, the probability of following a link will be $\beta$ and there is also a small probability $1-\beta$ such that the random walker will jump to a random state.
+
+  - Dead end (no out links). The rank vector converges to 0.
+
+    ```
+    A <-- B ---> C ---+
+                  ^    |
+                  |    |
+                  +----+
+    ```
+
+    
+
+- Does it converge to what we want?
+
+- Are the results reasonable?
+
+## Lecture 10 Why Teleports Solve the Problem
+
+A little bit theory of Markov chains: for any start vector, the power method applied to a Markov chain transition matrix $P$ will **converge to a unique positive stationary vector** as long as $P$ is 
+
+- Stochastic (every column sums to one)
+- Irreducible ($M_{ij}$  nonzero for all links)
+- Aperiodic (no loops like $ A \to B \to C \to A \ldots$)
+
+The PageRank equation
+$$
+r_j = \sum_{i \to j} \beta \frac{r_i}{d_i} + (1 - \beta) \frac1{n}
+$$
+In practice, $\beta$ is chosen to be 0.8 or 0.9.
+
+
+
+## Lecture 11 How we Really Compute PageRank
+
+$$
+r = \beta M r + \frac{1-\beta}{N}
+$$
+
+The key observation is that $M$ is a sparse matrix.
+
 
 
 ## Lecture 41 Overview of Recommendation Systems
