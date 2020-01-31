@@ -223,7 +223,61 @@ $$
 
 The key observation is that $M$ is a sparse matrix.
 
+## Lecture 12 Finding Similar Sets
 
+Many data-mining tasks can be expressed as finding similar sets.
+
+- Mirror sites. Don't want to show them both in search results
+- Plagiarism detection
+- News story clustering
+
+3 methods for finding similar documents
+
+- Shingling
+  - Convert document to set
+  - **k-gram** is a sequence of k characters that appear in a document
+- Minhashing
+  - Map similar sets to similar vectors
+- Locality-sensitive hashing
+
+## Lecture 13 Minhashing
+
+**Jaccard similarity** is much like the iou in object detection
+$$
+\text{sim}(C_1, C_2) = \frac{|C_1 \cap C_2|}{|C_1 \cup C_2|}
+$$
+**Minhashing** is a technique for quickly estimating how similar two sets are. 
+
+See a more clear explanation of minhashing [here](https://web.stanford.edu/class/cs276b/handouts/minhash.pdf).
+$$
+P(\text{minhash}(A) = \text{minhash}(B)) = \text{Jaccard}(A, B)
+$$
+
+
+## Lecture 14 Locality Sensitive Hashing
+
+A [post](https://zhuanlan.zhihu.com/p/80638247) about minhashing and locality sensitive hashing.
+
+## Lecture 15 Applications of LSH
+
+Not fully understood.
+
+## Lecture 16 Fingerprint Matching
+
+## Lecture 17 Finding Duplicate News Articles
+
+## Lecture 18 Distance Measures
+
+Jaccard similarity is not a distance. 1 minus Jaccard similarity is a distance.
+
+- $L_1$ norm (Manhattan distance)
+- $L_2$ norm
+- $L_\infty$ norm
+- Jaccard distance = 1 minus Jaccard similarity
+- Cosine distance = angle between the vectors
+- Edit distance = number of inserts and deletes needed to change one string into another
+- Hamming distance for bit vectors = the number of positions where they differ
+- 
 
 ## Lecture 41 Overview of Recommendation Systems
 
